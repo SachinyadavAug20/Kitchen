@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour {
     [SerializeField]private float moveSpeed=0.5f;
-    [SerializeField]private float _rotationSpeed=5f;
+    [SerializeField]private float _rotationSpeed=8f;
     PlayerInput _playerInput;
     Rigidbody _rb;
     private void Awake() {
