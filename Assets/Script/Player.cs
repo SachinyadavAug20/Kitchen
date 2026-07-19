@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour {
     PlayerInput _playerInput;
@@ -10,7 +11,7 @@ public class Player : MonoBehaviour {
     private void Update() {
         var horizontalInput = _playerInput.actions["Move"].ReadValue<Vector2>();
         Debug.Log(horizontalInput);
-        _rb.velocity = new Vector3(horizontalInput.x, 0, horizontalInput.y) * 10;
+        _rb.linearVelocity = new Vector3(horizontalInput.x, 0, horizontalInput.y) * 10;
 
     }
 }
